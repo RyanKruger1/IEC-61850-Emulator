@@ -29,11 +29,13 @@ public class XMLReader {
             dataSets = doc.getElementsByTagName("DataSet");
             logicalNodes = doc.getElementsByTagName("LN");
 
-            returnAttributes(logicalNodes.item(1));
+            System.out.println(getAttributeValue(logicalNodes.item(1),"lnClass"));
 
         }catch(Exception ex){
+
             System.out.println("Error" + ex.getMessage() );
             return 404;
+
         }
         return 200;
     }
@@ -52,5 +54,13 @@ public class XMLReader {
         System.out.println(attributes.get("prefix"));
         return attributes;
 
+    }
+
+    public static String getAttributeValue(Node node, String attribute){
+        String value = "";
+        for(int i = 0 ; i < node.getAttributes().getLength();i++ ){
+          if(node.getAttributes().item(i).toString().contains(attribute)) {value = node.getAttributes().item(i).toString().split("=")[1];}
+        }
+        return value;
     }
 }

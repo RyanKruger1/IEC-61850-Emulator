@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="XMLTester" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-26T19:47:08" hostname="KRUGER" time="0.059">
+<testsuite name="XMLTester" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-27T16:12:05" hostname="KRUGER" time="0.062">
   <properties/>
-  <testcase name="uploadFile" classname="XMLTester" time="0.059"/>
-  <system-out><![CDATA[This is where the ICD File will be read
-[Communication: null]
+  <testcase name="uploadFile" classname="XMLTester" time="0.062"/>
+  <system-out><![CDATA["GGIO"
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
