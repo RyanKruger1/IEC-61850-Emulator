@@ -1,8 +1,4 @@
-package Structures;
-
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import utilities.XMLReader;
+package structures;
 
 public class LogicalNode {
 
@@ -25,6 +21,10 @@ public class LogicalNode {
 
     public String getLnType(){
         return lnType;
+    }
+
+    public String getLnName(){
+        return lnName;
     }
 
     public DataObject[] getDataObjects(){

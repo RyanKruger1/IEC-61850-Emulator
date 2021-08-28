@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import Structures.LogicalNode;
+import structures.LogicalNode;
 import org.w3c.dom.NodeList;
 import utilities.XMLReader;
 
@@ -43,5 +43,30 @@ public class LogicalNodeTester {
     public void assertThatAttributeNamesAreRetrievable(){
         System.out.println(logicalNode.getDataObjects()[0].getAttributes()[0].getName());
         Assert.assertNotNull(logicalNode.getDataObjects()[0].getAttributes()[0].getName());
+    }
+
+    @Test
+    public void displayHierarchyOfLogicalNodes(){
+        NodeList nodeList = xml.getLogicalNodes();
+        for(int i =0 ; i < nodeList.getLength();i++){
+            logicalNode =
+                    new LogicalNode(
+                            XMLReader.getDataObjects(nodeList.item(i)),
+                            XMLReader.getAttributeValue(nodeList.item(i),"lnType"),
+                            XMLReader.getAttributeValue(nodeList.item(i),"lnClass"),
+                            XMLReader.getAttributeValue(nodeList.item(i),"name"));
+
+            System.out.println(logicalNode.getLnClass());
+            for(int j = 0;j<logicalNode.getDataObjects().length;j++){
+
+                System.out.println("\t"+logicalNode.getDataObjects()[j].getName());
+
+                for(int k =0;k< logicalNode.getDataObjects()[j].getAttributes().length;k++){
+                    System.out.println("\t\t"+logicalNode.getDataObjects()[j].getAttributes()[k].getName());
+
+                }
+            }
+        }
+
     }
 }

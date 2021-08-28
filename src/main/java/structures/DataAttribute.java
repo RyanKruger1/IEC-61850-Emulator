@@ -1,6 +1,4 @@
-package Structures;
-
-import org.w3c.dom.Node;
+package structures;
 
 public class DataAttribute {
 

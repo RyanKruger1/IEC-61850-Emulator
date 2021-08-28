@@ -1,6 +1,4 @@
-package Structures;
-
-import javax.xml.crypto.Data;
+package structures;
 
 public class DataObject {
 
