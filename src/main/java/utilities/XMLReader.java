@@ -1,21 +1,16 @@
 package utilities;
 
-import Structures.DataAttribute;
-import Structures.DataObject;
+import structures.DataAttribute;
+import structures.DataObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import javax.swing.text.AsyncBoxView;
 import javax.xml.XMLConstants;
-import javax.xml.crypto.Data;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.stream.events.Attribute;
 import java.io.File;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 

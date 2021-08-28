@@ -1,5 +1,5 @@
-import Structures.DataAttribute;
-import Structures.DataObject;
+import structures.DataAttribute;
+import structures.DataObject;
 import org.junit.Assert;
 import org.junit.Test;
 import org.w3c.dom.Element;
